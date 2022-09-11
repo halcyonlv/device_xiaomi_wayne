@@ -23,8 +23,6 @@ PRODUCT_NAME := lineage_wayne
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-TARGET_VENDOR_PRODUCT_NAME := wayne
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="wayne-user 8.1.0 OPM1.171019.011 V9.5.11.0.ODCCNFA release-keys" \
     BuildFingerprint=xiaomi/wayne/wayne:8.1.0/OPM1.171019.011/V9.5.11.0.ODCCNFA:user/release-keys
