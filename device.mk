@@ -7,6 +7,10 @@
 # Inherit from wayne-common
 $(call inherit-product, device/xiaomi/wayne-common/wayne.mk)
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    com.fingerprints.extension@1.0.vendor
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     device/xiaomi/wayne/overlay
