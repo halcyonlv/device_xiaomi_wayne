@@ -6,6 +6,9 @@
 # Inherit from wayne-common
 $(call inherit-product, device/xiaomi/wayne-common/wayne.mk)
 
+# Non_ab_device
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     device/xiaomi/wayne/overlay
@@ -16,7 +19,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom.ramdisk
 
 # Seamless Update
-AB_OTA_UPDATER
+AB_OTA_UPDATER := false
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
