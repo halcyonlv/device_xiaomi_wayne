@@ -19,6 +19,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# VNDK
+PRODUCT_PACKAGES += \
+    libhidlbase-v32.vendor
+
 # Wifi
 PRODUCT_PACKAGES += \
     WayneWifiOverlay
