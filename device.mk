@@ -17,7 +17,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.qcom
+    fstab.qcom \
+    fstab.qcom.ramdisk
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
