@@ -12,10 +12,23 @@ from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
 )
+from extract_utils.fixups_lib import (
+    lib_fixups,
+    lib_fixups_user_type,
+)
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
 )
+
+namespace_imports = [
+    'hardware/xiaomi',
+    'vendor/xiaomi/sdm660-common',
+]
+
+lib_fixups: lib_fixups_user_type = {
+    **lib_fixups,
+}
 
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libgf_ca.so': blob_fixup()
@@ -28,7 +41,8 @@ module = ExtractUtilsModule(
     'wayne',
     'xiaomi',
     blob_fixups=blob_fixups,
-    check_elf=False,
+    lib_fixups=lib_fixups,
+    namespace_imports=namespace_imports,
 )
 
 if __name__ == '__main__':
